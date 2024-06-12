@@ -32,8 +32,8 @@ const links = [
 
 const Nav = () => {
     return (
-       <nav>
-            desktop nav
+       <nav className="flex">
+            {links.map(item => <li key={item.name}>{item.name}</li>)}
        </nav>
     )
 }
