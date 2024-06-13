@@ -11,6 +11,105 @@
 }
 
 
+
+
+
+/*
+  ##################### 1
+  p-10 text-red flex   => 1:1 대응 (css 단일 적용)
+  divide-10 space-5 transform-gpu   => 다대일 대응 (css뭉쳐져있는 클래스 적용)
+  sm:p-10 hover:text-red focus:flex    => 가상 클래스 선택자 포함
+
+  sm: 사이즈 sm일때 p-10 적용
+  hover: 마우스오버 했을 때 text-red 적용 
+  forcus: 포커스했을 때 flex 적용
+*/
+
+
+/* ##################### 2 */
+/* 이런식으로 묶음 형태로 사용 가능 */
+/* @layer components {
+  .text-title {
+    @apply text-4xl select-none text-deepBlack;
+  }
+
+  .text-subTitle {
+    @apply text-2xl select-none text-black;
+  }
+} */
+
+/* ##################### 3 */
+/* config 파일에서도 묶음으로 사용 가능 */
+/* theme: {
+  extend: {
+    colors: {
+      deepGreen: '#aaa',
+      lightGreen: '#aaa'
+    }
+  }
+} */
+
+
+
+/* 
+
+flex 
+gap-8
+items-center
+justify-between
+py-8  ### padding-y
+xl:py12   
+text-white
+capitalize 
+font-medium 
+hover:text-accent 
+transition-all
+
+h-screen 
+w-screen 
+fixed 
+top-0 left-0 right-0 
+pointer-events-none 
+z-40
+flex-col
+w-8
+h-9
+mt-32
+mb-40
+text-center
+text-2xl
+
+
+
+반응형 할 때 
+text-[150px] lg:text-[20px]
+w-[100%] 
+
+
+
+*/
+
+
+
+
+
+
+/* 주의점 */
+/* 1. JS로 동적 클래스네임이 붙은건 빌드 시 정상작동하지않음 
+<div className={`pt-` + val}></div>
+
+2. 테일윈드 관련 설정은 tailwind.config.js 를 찾아야됨
+3. 테일윈드 공식 문서 잘보기 */
+
+
+
+
+
+
+
+
+
+
 /* 
   @layer base {
     :root {
