@@ -31,6 +31,18 @@ const ServicesPage = () => {
     console.log(user)
   }
 
+
+  const data = [
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+    { name: 'a1', age: 2 },
+  ]
+
   return (
     <div>
       <h1>ServicesPage</h1>
@@ -47,6 +59,21 @@ const ServicesPage = () => {
       <div className='mt-10'>name: {user.name}</div>
       <div className='mt-2'>age: {user.age}</div>
       <div className='mt-2'>address: {user.address}</div>
+
+
+      <hr />
+
+      <ul className='flex flex-wrap p-2.5'>
+        {data.map((item, idx) => {
+          return (
+            <li className='border-solid border-2 border-white w-full lg:w-6/12 p-2.5' key={idx}>
+              <div>{item.name}</div>
+              <div>{item.age}</div>
+            </li>
+          )
+        })}
+      </ul>
+
     </div>
   )
 }
