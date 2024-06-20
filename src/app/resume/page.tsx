@@ -31,6 +31,11 @@ const ResumePage = () => {
       <h2>display</h2>
       <div>block inline</div>
 
+    asdasd
+
+
+      
+
     </div>
   )
 }
