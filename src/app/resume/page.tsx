@@ -1,6 +1,14 @@
 import React from 'react'
 
 const ResumePage = () => {
+
+
+  function zzz(obj: { a: number, b: number }) {
+    console.log(obj.a, obj.b)
+  }
+
+  zzz({ a: 1, b: 2 })
+
   return (
     <div>
 
