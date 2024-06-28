@@ -1,6 +1,10 @@
 "use client"
 
+import Test from '@/components/Test';
 import React, { useState } from 'react'
+
+
+
 
 const ServicesPage = () => {
 
@@ -32,6 +36,8 @@ const ServicesPage = () => {
   }
 
 
+  
+
   const data = [
     { name: 'a1', age: 2 },
     { name: 'a1', age: 2 },
@@ -46,6 +52,14 @@ const ServicesPage = () => {
   return (
     <div>
       <h1>ServicesPage</h1>
+
+
+      <Test n={"nnnn"}>
+        <p>하하하하</p>
+      </Test>
+
+
+
       <button type="button" onClick={handleSettingName}>set name</button>
       {name}
 
@@ -55,7 +69,7 @@ const ServicesPage = () => {
       <input type="text" name="age" value={user.age} onChange={handleInputChange}  placeholder='age' className='bg-primary border-b-2' /><br />
       <input type="text" name="address" value={user.address} onChange={handleInputChange}  placeholder='address' className='bg-primary border-b-2' />
     
-
+      {/* { comment.writeId?.project._id.projectImages && <div className='project_image'>{IconData[comment.writeId?.project._id.projectImages]}</div> } */}
       <div className='mt-10'>name: {user.name}</div>
       <div className='mt-2'>age: {user.age}</div>
       <div className='mt-2'>address: {user.address}</div>
@@ -139,12 +153,40 @@ const ServicesPage = () => {
 
 
 
+      <div className='animate-jump animate-once px-[20px] py-[50px] mx-[40px] my-[20px]'>asdasd</div>
 
 
 
+<br /><br />
+<div className="border border-blue-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+  <div className="animate-pulse flex space-x-4">
+    <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+    <div className="flex-1 space-y-6 py-1">
+      <div className="h-2 bg-slate-700 rounded"></div>
+      <div className="space-y-3">
+        <div className="grid grid-cols-3 gap-4">
+          <div className="h-2 bg-slate-700 rounded col-span-2"></div>
+          <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+        </div>
+        <div className="h-2 bg-slate-700 rounded"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-      <div className='animate-jump animate-once'>asdasd</div>
+      <br />
+      <button type="button" className="bg-indigo-500 ..." disabled>
+        <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+        </svg>
+        Processing...
+      </button>
+      <br />
+      <span className="relative flex h-3 w-3">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+      </span>
+
       <br />
       <br />
       <br />
