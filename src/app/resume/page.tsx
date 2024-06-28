@@ -13,16 +13,6 @@ const ResumePage = () => {
 
   return (
     <div>
-<<<<<<< HEAD
-=======
-      ResumePage
-      <RefParent />
-
-      <br /><br /><br />
-
-      <AsyncCompo />
-
->>>>>>> ff6317942c7900e4ae5fdebcc27a32756290b8a7
       <h2>padding</h2>
       <div className='p-4 bg-blue-100'>p-4 px-4 py-4 pl-4 pr-4 pb-4 pt-4</div>
       <h2>margin</h2>
