@@ -13,6 +13,9 @@ interface Props {
 }
 
 
+
+
+
 const ButtonTail = ({ type, props, text, handleClick }: Props) => {
   return (
     <button onClick={handleClick} {...props}>

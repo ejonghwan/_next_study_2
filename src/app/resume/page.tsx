@@ -11,6 +11,31 @@ const ResumePage = () => {
 
   zzz({ a: 1, b: 2 })
 
+
+  interface User<T> {
+    name: string;
+    data: T[]
+  }
+
+  interface UserData<T> {
+    data1: string;
+    data2: number;
+    data3?: T 
+  }
+
+
+  const user: User<UserData<string>> = {
+    name: 'jonghwan',
+    data: [{ data1: 'asdasd', data2: 33, data3: 'asdasd' }]
+
+  }
+
+  const user2: User<UserData<number>> = {
+    name: 'jonghwan',
+    data: [{ data1: 'asdasd', data2: 33, data3: 33 }]
+  }
+
+
   return (
     <div>
       <h2>padding</h2>
