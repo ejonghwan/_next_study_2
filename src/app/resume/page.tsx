@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import RefParent from '@/components/RefParent'
 import AsyncCompo from '@/components/AsyncCompo'
@@ -9,10 +11,44 @@ const ResumePage = () => {
     console.log(obj.a, obj.b)
   }
 
-  zzz({ a: 1, b: 2 })
+  zzz({ a: 3, b: 2 })
+
+  interface Props<T> {
+    a: string;
+    b: T
+  }
+
+  interface ChildProps<T> {
+    c: string;
+    d: T
+  }
+
+
+  const obj: Props<ChildProps<number>> = {
+    a: 'asdasd',
+    b: {
+      c: 'asdasd',
+      d: 3
+    }
+  }
+
+
+
+  let a: string = '213'
+
+
+
+
+  const handlehoho = (e: Event) => {
+    console.log(e)
+  }
+
+
 
   return (
     <div>
+
+      <button type="button" onClick={handlehoho}>asd</button>
       <h2>padding</h2>
       <div className='p-4 bg-blue-100'>p-4 px-4 py-4 pl-4 pr-4 pb-4 pt-4</div>
       <h2>margin</h2>
