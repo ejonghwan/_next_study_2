@@ -1,4 +1,5 @@
 "use client"
+
 import Test from '@/components/Test'
 import Button from '@/components/button/Button'
 import ButtonTail from '@/components/button/ButtonTail'
@@ -7,6 +8,24 @@ import React, { useEffect, useState } from 'react'
 
 
 const ContactPage = () => {
+
+
+  const testVar = 'zzzzz'
+  const testObj = {
+    objKey: 'asd'
+  }
+  console.log('fn inner?', testVar)
+
+  useEffect(() => {
+    console.log('on mount?', testVar)
+
+    return () => { console.log('un mount?', testVar) }
+  }, [testObj])
+
+  const [btn, setBtn] = useState(0)
+  const handleNumUp = () => setBtn(prev => prev + 1)
+
+
 
 
   interface Props {
@@ -52,12 +71,24 @@ const ContactPage = () => {
   ge<number[]>([1,2,3])
 
 
+
+
+  function typeTest<T>(a: T, b: T): T[] {
+    const arr = [] 
+    arr.push(a, b)
+    return arr; 
+  }
+
+  console.log( typeTest<number>(6, 6) )
+
+
+
   const handleClick = () => console.log('handle click fn ')
 
   return (
     <div>
       <p>ContactPage</p>
-      <Button className={'type1'}/>
+      <Button className={' text-red-300 '}/>
       <Button className={'type2'}/>
       <Button className={'type3'}/>
       <hr />
@@ -73,6 +104,8 @@ const ContactPage = () => {
 
       <hr />
       <Test />
+
+      <button type="button" onClick={handleNumUp}>handleNumUp {btn}</button>
     </div>
   )
 }

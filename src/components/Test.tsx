@@ -20,7 +20,7 @@ const Test = ({ children, n }: { children: React.ReactNode, n: string }) => {
         { name: 'a5', age: 0 }
     ]
 
-    const [ user, setUser ] = useState(data)
+    const [ user, setUser ] = useState<any>(data)
 
     const arr = [
         { name: 'ho', age:1 },
@@ -41,7 +41,6 @@ const Test = ({ children, n }: { children: React.ReactNode, n: string }) => {
 
   return (
     <div>
-
         <div className='border-2 border-gray-100'>여기는 칠드런 밖 영역</div>
         <div className='border-2 border-indigo-500'>
             여기는 칠드런 안 영여 
@@ -59,7 +58,7 @@ const Test = ({ children, n }: { children: React.ReactNode, n: string }) => {
 
 
         <ul>
-            { arr.map((item, idx) => <li>{item.name}</li>) }
+            { arr.map((item, idx) => <li key={idx}>{item.name}</li>) }
 
             {/* <p>name: {user.name}</p> */}
             {/* <p>age: {user.age}</p> */}
