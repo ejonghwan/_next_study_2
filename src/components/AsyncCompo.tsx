@@ -38,7 +38,7 @@ const hoho: Hoho<Hoho2<Hoho3<string>>> = {
     name: 'hh'
 }
 
-function test<T>(a: any, b: T): T {
+function test<T extends number>(a: T, b: T): number {
     const ab = (a + b)
     return ab
 }
@@ -54,16 +54,24 @@ const return_n = test<number>(3, 3)
 console.log('??', return_n)
 
 
+const arr2: string[] = ['a', 'b', 'c', 'd']
+const result = arr2.reduce((acc, cur) => {
+    console.log(acc, cur)
+    acc.push(cur)
+    return acc
+}, [] as string[])
+
+console.log('??????????????', result)
+
+
 
 
 const AsyncCompo = () => {
 
     const [data, setData] = useState<Data[]>([])
-
     const getDataApi = async () => {
         const res = await axios.get('https://jsonplaceholder.typicode.com/todos')
         const data = res.data;
-
         setData(data)
         console.log('data??', res, data)
     }
