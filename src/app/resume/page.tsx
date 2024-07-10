@@ -44,17 +44,17 @@ const ResumePage = () => {
   }
 
 
-  // const obj: Props<ChildProps<number>> = {
-  //   a: 'asdasd',
-  //   b: {
-  //     c: 'asdasd',
-  //     d: 3
-  //   }
-  // }
+  const obj: Props<ChildProps<number>> = {
+    a: 'asdasd',
+    b: {
+      c: 'asdasd',
+      d: 3
+    }
+  }
 
 
 
-  // let a: string = '213'
+  let a: string = '213'
 
 
 
