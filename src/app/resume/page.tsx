@@ -45,9 +45,50 @@ const ResumePage = () => {
   }
 
 
+<<<<<<< HEAD
   const handleSubmit = async() => {
     const res = await axios.post('api url', { user: user });
     const data = res.data
+=======
+  const obj: Props<ChildProps<number>> = {
+    a: 'asdasd',
+    b: {
+      c: 'asdasd',
+      d: 3
+    }
+  }
+
+
+
+  let a: string = '213'
+
+
+
+
+  const handlehoho = (e: Event) => {
+    console.log(e)
+  }
+
+
+
+
+  interface User<T> {
+    name: string;
+    data: T[]
+  }
+
+  interface UserData<T> {
+    data1: string;
+    data2: number;
+    data3?: T 
+  }
+
+
+  const user: User<UserData<string>> = {
+    name: 'jonghwan',
+    data: [{ data1: 'asdasd', data2: 33, data3: 'asdasd' }]
+
+>>>>>>> 4ef0c2d058a1c026ed5bee2e6fb2acc2e73816e7
   }
   
   useEffect(() => {
