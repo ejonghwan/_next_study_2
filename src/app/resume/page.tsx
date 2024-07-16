@@ -26,6 +26,7 @@ const ResumePage = () => {
   })
 
 
+
   useEffect(() => {
     console.log('user???', user)
   }, [user])
@@ -47,9 +48,12 @@ const ResumePage = () => {
   const handleSubmit = async() => {
     const res = await axios.post('api url', { user: user });
     const data = res.data
-
   }
   
+  useEffect(() => {
+    console.log('hoho')
+  }, [])
+
 
   return (
     <div>
@@ -129,10 +133,11 @@ const ResumePage = () => {
       <h2>display</h2>
       <div>block inline</div>
 
-    asdasd
-
-
       
+      
+
+
+
 
     </div>
   )

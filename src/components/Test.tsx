@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 
 
+
 export const Test1 = 'Test1'
  const Test2 = 'Test1'
  const Test3 = 'Test1'
@@ -41,6 +42,9 @@ const Test = ({ children, n }: { children: React.ReactNode, n: string }) => {
 
   return (
     <div>
+        <div>ref test</div>
+
+
         <div className='border-2 border-gray-100'>여기는 칠드런 밖 영역</div>
         <div className='border-2 border-indigo-500'>
             여기는 칠드런 안 영여 
