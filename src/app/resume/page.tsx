@@ -45,6 +45,10 @@ const ResumePage = () => {
   }
 
 
+
+
+
+
   // const handleSubmit = async() => {
   //   const res = await axios.post('api url', { user: user });
   //   const data = res.data
@@ -69,6 +73,8 @@ const ResumePage = () => {
         </select>
         {/* <button type='button' onClick={handleSubmit} >서버로 보내기</button> */}
       </div>
+
+
 
 
 

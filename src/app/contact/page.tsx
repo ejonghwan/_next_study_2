@@ -3,7 +3,8 @@
 import Test from '@/components/Test'
 import Button from '@/components/button/Button'
 import ButtonTail from '@/components/button/ButtonTail'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo, useCallback } from 'react'
+import MemoHooks from '@/components/MemoHooks'
 
 
 
@@ -14,13 +15,14 @@ const ContactPage = () => {
   const testObj = {
     objKey: 'asd'
   }
+
   console.log('fn inner?', testVar)
 
   useEffect(() => {
     console.log('on mount?', testVar)
-
     return () => { console.log('un mount?', testVar) }
   }, [testObj])
+
 
   const [btn, setBtn] = useState(0)
   const handleNumUp = () => setBtn(prev => prev + 1)
@@ -89,8 +91,27 @@ const ContactPage = () => {
 
   const handleClick = () => console.log('handle click fn ')
 
+
+  const [val, setVal] = useState(0)
+  const nameobj = useMemo(() => ({ name: 'jonghwan' }), [])
+  // const namefn = () => { console.log('부모 함수') }
+  const namefn = useCallback(() => { console.log('부모 함수') }, [])
+
+
+  // useContext useReducer
+
+
   return (
     <div>
+
+
+      <MemoHooks nameobj={nameobj} namefn={namefn} />
+      <div>상태 체크 : {val}</div>
+      <button type='button' onClick={() => setVal(prev => prev + 1)}>상태변경 체크</button>
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
       <p>ContactPage</p>
       <Button className={' text-red-300 '}/>
       <Button className={'type2'}/>
