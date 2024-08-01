@@ -7,26 +7,38 @@ import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import MemoHooks from '@/components/MemoHooks'
 
 
-
 const ContactPage = () => {
 
 
   const testVar = 'zzzzz'
-  const testObj = {
-    objKey: 'asd'
-  }
+  const testObj = useMemo(() => {
+    return {
+      objKey: 'asd'
+    }
+  }, [])
 
-  console.log('fn inner?', testVar)
+
+  const testFn = useCallback( () => {
+    console.log('이런 함수 만듦')
+  }, [])
+
+
+
+
+  
+  // 변경안되는 함수
+  // const testFn = () => {
+  //   console.log('이런 함수 만듦')
+  // }
 
   useEffect(() => {
-    console.log('on mount?', testVar)
-    return () => { console.log('un mount?', testVar) }
-  }, [testObj])
+    console.log('on mount?', testObj)
+    return () => {  }
+  }, [])
 
 
   const [btn, setBtn] = useState(0)
   const handleNumUp = () => setBtn(prev => prev + 1)
-
 
 
 

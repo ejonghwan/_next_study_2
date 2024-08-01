@@ -9,6 +9,8 @@ import React, { memo, useEffect } from 'react'
 // 문자열은 기본타입 데이터라서.  
 // 객체 함수는 참조형 데이터라서.
 
+
+
 const MemoHooks = ({ nameobj, namefn }) => {
     
 

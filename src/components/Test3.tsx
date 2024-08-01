@@ -26,9 +26,20 @@ import React, { useEffect, useRef, forwardRef } from 'react'
 
 // export default Test3;
 
+// interface Props {
+//   start: any;
+//   end: any;
+//   handleToto: () => void;
+// }
 
-const Test3 = ({ start, end }) => {
 
+const Test3 = ({ start, end, handleToto }: { start: any; end: any; handleToto: () => void; }) => {
+
+  handleToto()
+
+
+
+  
 
   const abc = useRef(null)
   // console.log('ddd?', ddd.current)

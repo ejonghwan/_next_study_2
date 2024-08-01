@@ -7,7 +7,7 @@ import ProductItem from '../../components/productItem'
 const WorkPage = () => {
 
 
-  const divRef = useRef<React.ReactElement>(null)
+  const divRef = useRef<React.LegacyRef<HTMLDivElement> | undefined>(null)
 
   const data = [
     { name: '삼성', badge: '가나다1', isBadge: true, types: [3,2,1] },

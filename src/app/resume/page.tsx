@@ -6,6 +6,8 @@ import AsyncCompo from '@/components/AsyncCompo'
 import ContentBox from '@/components/test/ContentBox'
 import Section from '@/components/test/Section'
 
+import Link from 'next/link'
+
 const ResumePage = () => {
 
   const data = [
@@ -73,6 +75,10 @@ const ResumePage = () => {
         </select>
         {/* <button type='button' onClick={handleSubmit} >서버로 보내기</button> */}
       </div>
+
+
+      <Link href={'https://www.naver.com'} target='_blank'>naver</Link>
+      <a href={'https://www.naver.com'} target='_blank'>naver</a>
 
 
 
