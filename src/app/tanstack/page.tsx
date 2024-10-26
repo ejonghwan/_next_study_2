@@ -1,4 +1,4 @@
-import MainCompo from '@/components/tanstack/mainCompo'
+import MainCompo from '@/components/tanstack/MainCompo'
 import React from 'react'
 
 const TanstackPage = () => {
