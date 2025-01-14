@@ -81,26 +81,26 @@ const AsyncCompo = () => {
     }, [])
 
 
-  return (
-    <div>
+    return (
+        <div>
 
-        <h3>async components</h3>
-        <Social />
-        <ul>
-            
-            {data && data?.map((item, idx) => (
-                <li key={idx}>
-                    <div>{item.id}</div>
-                    <div>{item.title}</div>
-                    <div>{item.userId}</div>
-                    <div>{item.completed}</div>
-                </li>
-            ))}
-        </ul>
+            <h3>async components</h3>
+            <Social />
+            <ul>
+
+                {data && data?.map((item, idx) => (
+                    <li key={idx}>
+                        <div>{item.id}</div>
+                        <div>{item.title}</div>
+                        <div>{item.userId}</div>
+                        <div>{item.completed}</div>
+                    </li>
+                ))}
+            </ul>
 
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default AsyncCompo
